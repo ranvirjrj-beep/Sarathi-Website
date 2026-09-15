@@ -39,6 +39,32 @@ I directly reviewed:
 
 I did **not** use mainnet funds, make a real-money trade, or claim a transaction flow I did not execute. The findings below distinguish observed beta behavior from documentation analysis.
 
+## Live beta evidence
+
+The screenshots below were captured during the final Solana Testnet re-verification on 15 September 2026.
+
+**Trade pairs 0% borrowing copy with an undefined, non-zero annualized `Borrow Cost`:**
+
+![Trade screen showing 0% borrowing copy and annualized Borrow Cost values](evidence/spout-trade-borrow-cost.jpg)
+
+**The onboarding tour presents leverage as 0% interest and highlights “more upside” without showing strike, expiry, assignment, or capped-upside context:**
+
+![Tour step 5 presenting leverage and 0% interest](evidence/spout-tour-zero-interest-step.jpg)
+
+**Ask Spout does not define `Borrow Cost` when asked directly:**
+
+![Ask Spout returning generic fee information instead of defining Borrow Cost](evidence/spout-ask-borrow-cost.jpg)
+
+**Ask Spout separately confirms assignment can sell collateral shares at the strike:**
+
+![Ask Spout explaining covered-call assignment and Auto-Roll](evidence/spout-ask-assignment.jpg)
+
+**Earn is unavailable, while the tour still instructs users to deposit USDC and choose Senior or Junior:**
+
+![Earn page stating that lending vaults are coming soon](evidence/spout-earn-coming-soon.jpg)
+
+![Tour step 8 presenting Earn deposits as available](evidence/spout-tour-earn-step.jpg)
+
 ---
 
 # Finding 1 — 0% cash interest is clear; the upside tradeoff is not
